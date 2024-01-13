@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basic Calculator</title>
+    <style>
+        body {
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-image: url(https://ai.glossika.com/imgs/landing-page-background-top.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.calculator {
+  margin:auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #0982ae;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  grid-column: 1 / -1;
+  text-align: right;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.about {
+  text-align: center;
+}
+header{
+    background-size: cover;
+    background-color: #000000;
+}
+header .nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    color: rgb(251, 251, 251);
+    padding-top: 20px;
+    
+}
+header .nav .logo{
+    font-size: 25px;
+}
+header .nav .menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+header .nav .menu a:hover{
+    color: brown;
+    border-bottom: 1px solid brown;
+}
+header .nav .button a{
+    text-decoration:none ;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: brown;
+    transition: 0.5s;
+}
+header .nav .button a:hover{
+    background-color: transparent;
+    color: brown;
+    border: 1px solid brown;
+}
+
+
+.logo{
+    font-family: cursive;
+}
+.cont{
+    color: aliceblue;
+    position: relative;
+    text-align: center;
+}
+.cont > h1::first-letter{
+    font-size: 50px;
+}
+.cont >h1{
+    font-family: cursive;
+    font-size: 30px;
+}
+footer {
+ 
+ margin-top: 25px;
+ color: #000000;
+ text-align: center;
+ padding: 10px 0;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+          <div class="logo">CodSoft_Jagadish</div>
+          <div class="menu">
+              <a href="landing1.html">Home</a>
+              
+              <a href="portfolio.html">Portfolio</a>
+              
+              <a href="calculator.html">Calculator</a>
+             
+          </div>
+          <div class="button">
+              <a href="register.html">Register</a>
+          </div>
+      </div>
+  </header>
+  <div class="cont">
+    <h1>Calculator</h1>
+</div>
+    <div class="calculator">
+      <div class="boxer" id="boxer">Calculator</div>
+      <div class="display" id="display">0</div>
+      <button class="btn" id="clear">C</button>
+      <button class="btn" id="backspace">←</button>
+      <button class="btn" id="divide">/</button>
+      <button class="btn" id="multiply">*</button>
+      <button class="btn" id="7">7</button>
+      <button class="btn" id="8">8</button>
+      <button class="btn" id="9">9</button>
+      <button class="btn" id="subtract">-</button>
+      <button class="btn" id="6">6</button>
+      <button class="btn" id="5">5</button>
+      <button class="btn" id="4">4</button>
+      <button class="btn" id="decimal">.</button>
+      <button class="btn" id="1">1</button>
+      <button class="btn" id="2">2</button>
+      <button class="btn" id="3">3</button>
+      <button class="btn" id="add">+</button>
+      <button class="btn" id="0">0</button>
+      <button class="btn" id="equals">=</button>
+
+      
+    </div>
+    <footer>
+      <p>
+          Copyrights &copy; 2023. All rights reserved ||      
+          Codsoft web develpoment task 3 <br>
+       Done by Garaga Jagadish Bapanna
+        
+      </p>
+    </footer>
+   
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const display = document.getElementById("display");
+  let currentInput = "0";
+  let currentOperator = "";
+  let prevInput = "";
+
+  function updateDisplay() {
+    display.textContent = currentInput;
+  }
+
+  function handleDigitClick(digit) {
+    if (
+      currentInput === "0" ||
+      currentInput === "Infinity" ||
+      currentInput === "-Infinity"
+    ) {
+      currentInput = digit;
+    } else {
+      currentInput += digit;
+    }
+    updateDisplay();
+  }
+
+  function handleOperatorClick(operator) {
+    prevInput = currentInput;
+    currentInput = "0";
+    currentOperator = operator;
+  }
+
+  function handleEqualsClick() {
+    const prev = parseFloat(prevInput);
+    const current = parseFloat(currentInput);
+
+    switch (currentOperator) {
+      case "+":
+        currentInput = prev + current;
+        break;
+      case "-":
+        currentInput = prev - current;
+        break;
+      case "*":
+        currentInput = prev * current;
+        break;
+      case "/":
+        currentInput = prev / current;
+        break;
+    }
+
+    currentOperator = "";
+    prevInput = "";
+    updateDisplay();
+  }
+
+  function clear() {
+    currentInput = "0";
+    currentOperator = "";
+    prevInput = "";
+    updateDisplay();
+  }
+
+  for (let i = 0; i <= 9; i++) {
+    document.getElementById(i.toString()).addEventListener("click", () => {
+      handleDigitClick(i.toString());
+    });
+  }
+
+  document
+    .getElementById("add")
+    .addEventListener("click", () => handleOperatorClick("+"));
+  document
+    .getElementById("subtract")
+    .addEventListener("click", () => handleOperatorClick("-"));
+  document
+    .getElementById("multiply")
+    .addEventListener("click", () => handleOperatorClick("*"));
+  document
+    .getElementById("divide")
+    .addEventListener("click", () => handleOperatorClick("/"));
+
+
+  document.getElementById("decimal").addEventListener("click", () => {
+    if (!currentInput.includes(".")) {
+      currentInput += ".";
+      updateDisplay();
+    }
+  });
+
+  document
+    .getElementById("equals")
+    .addEventListener("click", handleEqualsClick);
+  document.getElementById("clear").addEventListener("click", clear);
+
+  document.getElementById("backspace").addEventListener("click", () => {
+    currentInput = currentInput.slice(0, -1);
+    if (currentInput === "") {
+      currentInput = "0";
+    }
+    updateDisplay();
+  });
+
+  updateDisplay();
+});
+  </script>
+</html>

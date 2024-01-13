@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-size: cover;
+    background-color: #000000;
+}
+header .nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    color: rgb(251, 251, 251);
+    padding-top: 20px;
+    
+}
+header .nav .logo{
+    font-size: 25px;
+}
+header .nav .menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+header .nav .menu a:hover{
+    color: brown;
+    border-bottom: 1px solid brown;
+}
+header .nav .button a{
+    text-decoration:none ;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: brown;
+    transition: 0.5s;
+}
+header .nav .button a:hover{
+    background-color: transparent;
+    color: brown;
+    border: 1px solid brown;
+}
+
+
+.logo{
+    font-family: cursive;
+}
+
+
+.app{
+    text-align: center;
+}
+
+footer {
+ 
+  margin-top: 40px;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+}
+
+</style>
+    <title>Codsoft</title>
+</head>
+<body>
+    
+    <header>
+        <div class="nav">
+            <div class="logo">CodSoft_Jagadish</div>
+            <div class="menu">
+                <a href="landing1.html">Home</a>
+                
+                <a href="portfolio.html">Portfolio</a>
+                
+                <a href="calculator.html">Calculator</a>
+               
+            </div>
+            <div class="button">
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="cont">
+        <h1>Welcome to the Landing Page</h1>
+    </div> -->
+
+     <div class="app">
+     <h1 style="font-size: 500%;" id="home">Apple Store. </h1> <h1 style="font-size: 400%;color: gray;">The best way to buy the products you love.</h1> 
+ 
+    
+    <h2 class="headline" style="font-size: 400%; font-style: var();">iPhone 13 Pro<img style="background-size: 10%;" src="" alt=""></h2> 
+    <h2 style="font-size: 200%;">Oh. So. Pro</h2><br>
+
+
+
+    <blockquote> <q id="About Us"> Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. The Company’s products include iPhone, Mac, iPad, and Wearables, Home and Accessories. iPhone is the Company’s line of smartphones based on its iOS operating system. </q></blockquote >
+
+
+
+   <div class="slideshow-container">
+   <div class="mySlides fade">
+      
+      <img src="https://teknoliz.net/wp-content/uploads/2021/09/iphone-13-pro-iphone-13-pro-max-2-1.png" style="width:100%">     
+    </div>  
+    <div class="mySlides fade">     
+      <img src="https://www.apple.com/v/iphone-13-pro/e/images/meta/iphone-13-pro_specs__eizk4ztvei6a_og.png" style="width:100%">
+      
+    </div>   
+    <div class="mySlides fade">
+      <img  src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_Colors_09142021_big.jpg.slideshow-xlarge_2x.jpg" style="width:70%";>
+      
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+                            //    sliseshow
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); 
+    }
+    </script>
+
+
+
+  <div>
+
+  </div>
+
+
+
+
+<div >
+<h1 id="iphone" style="font-size: 350%;">iPhone</h1>
+<div ><img src="https://p.turbosquid.com/ts-thumb/xj/I0MFEa/Kd/thumbnail/jpg/1632216275/600x600/fit_q87/965ebb40e6dfe3caa6c49534177bffad60fef7d1/thumbnail.jpg" alt=""></div>
+
+<div>
+    <div style="font-size: 350%;">Apple iPhone 13 Pro Max Graphite</div>
+   <div style="font-size: 300%;">₹125,990 <del style="font-size: 70%;">₹129,990</del>(3% off)</div>
+</div>
+   <div><a href="https://www.tatacliq.com/apple-iphone-13-pro-max-128-gb---graphite/p-mp000000010632214?ef_id=Cj0KCQiAosmPBhCPARIsAHOen-NXPt5Xs1FZD79qtN70JE4VavkeNRF_LoJVA08WcB7mvN-I3UCrnIoaAoVCEALw_wcB:G:s&s_kwcid=AL!856!3!573529903155!!!g!304350764855!%7bkeyword&&cid=ps:E_sok-TataCliq-STD-Apple-Range-Visits:Google:PLA_Electronics&gclid=Cj0KCQiAosmPBhCPARIsAHOen-NXPt5Xs1FZD79qtN70JE4VavkeNRF_LoJVA08WcB7mvN-I3UCrnIoaAoVCEALw_wcB&gclsrc=aw.ds">Buy it now</a></div>
+</div><br><br>
+
+
+<div>
+   <div><img src="https://img.tatacliq.com/images/i7/1348Wx2000H/MP000000010632234_1348Wx2000H_202109171911082.jpeg" width="40%"></div>
+<div  style="font-size: 350%;">Apple iPhone 13 Pro Max (128 GB) - Silver</div>
+<div style="font-size: 300%;">₹128,440<del style="font-size: 70%;">₹129,990</del>(1% off)</div>
+<button><a href="https://www.tatacliq.com/apple-iphone-13-pro-max-128-gb---silver/p-mp000000010632217?cid=ps:E_sok-tatacliq-Performance_Max:Google:PLA_Electronincs&gclid=Cj0KCQiAosmPBhCPARIsAHOen-N9uRdFfuQeLetVPQRXE6-p8ejM7OSLWgeT0-t1hyzR0bm7IEUZpqsaAh6tEALw_wcB">Buy it now</a></button>
+<div ></div>
+</div>
+
+
+
+  <div>
+     <div><img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._SL1500_.jpg" width="40%"></div>
+  <div style="font-size: 350%;">Apple iPhone 13 (128 GB) -Pink</div>
+  <div style="font-size: 300%;">₹84,900<del style="font-size: 70%;">₹89,900</del>(5% off)</div>
+  <div ><a href="https://www.tatacliq.com/apple-iphone-13-256-gb---pink/p-mp000000010632179?ef_id=CjwKCAiAgbiQBhAHEiwAuQ6Bkvul4-dMlZft480dFPCVA0foR6q5cmDPsbUpZmFHg2PfNgDge-BbvRoCDUcQAvD_BwE:G:s&s_kwcid=AL!856!3!573529903155!!!g!304350764855!%7bkeyword&&cid=ps:E_sok-TataCliq-STD-Apple-Range-Visits:Google:PLA_Electronics&gclid=CjwKCAiAgbiQBhAHEiwAuQ6Bkvul4-dMlZft480dFPCVA0foR6q5cmDPsbUpZmFHg2PfNgDge-BbvRoCDUcQAvD_BwE&gclsrc=aw.ds">Buy it now</a></div>
+  </div>
+
+
+    <div>
+       <div><img src="https://img.tatacliq.com/images/i7/658Wx734H/MP000000008348505_658Wx734H_202012061452531.jpeg" width="40%"></div>
+    <div style="font-size: 350%;">Apple iPhone 13 Pro Max (64 GB) - Black</div>
+    <div style="font-size: 300%;">₹49,900<del style="font-size: 70%;">₹59,900</del>(10% off)</div>
+    <div ><a href="https://www.tatacliq.com/apple-iphone-12-mini-64gb---black/p-mp000000007965606?ef_id=CjwKCAiAgbiQBhAHEiwAuQ6Bkoo9ZPTrdgOPlUh6SO-7Ei6rUe3zBnBfk_6smuxuSVXyfGC8MOcsExoCBXIQAvD_BwE:G:s&s_kwcid=AL!856!3!573529903155!!!g!304350764855!%7bkeyword&&cid=ps:E_sok-TataCliq-STD-Apple-Range-Visits:Google:PLA_Electronics&gclid=CjwKCAiAgbiQBhAHEiwAuQ6Bkoo9ZPTrdgOPlUh6SO-7Ei6rUe3zBnBfk_6smuxuSVXyfGC8MOcsExoCBXIQAvD_BwE&gclsrc=aw.ds">Buy it now</a></div>
+    </div>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+<h1 class="headline" style="font-size: 400%; font-style: var();">AirPods<img style="background-size: 10%;" src="" alt="" id="AirPods"></h1> 
+  
+
+<br><br><br><br>
+
+    ><div class="row">
+          <div class="column">
+            <img src="https://img.tatacliq.com/images/i7/450Wx545H/MP000000010970541_450Wx545H_202110210209011.jpeg" width="40%" ;style="width:100%">
+            <div style="font-size: 300%;">Apple AirPods Pro 3rd Generation</div>
+            <div style="font-size: 300%;">₹17,999<del style="font-size: 70%;">₹18,500</del>(2% off)</div>
+            <div ><a href="https://www.tatacliq.com/apple-airpods-3rd-generation/p-mp000000010970541?ef_id=CjwKCAiAgbiQBhAHEiwAuQ6Bknz67qZ1BG7-Pn-3HZES_4EP90iz_q9dWSCFve7PcB-6T9BCAsb0uxoCFVkQAvD_BwE:G:s&s_kwcid=AL!856!3!573530356551!!!g!1258010602991!%7bkeyword&&cid=ps:E_sok-TataCliq-STD-Apple-Range-Visits:Google:PLA_Electronics&gclid=CjwKCAiAgbiQBhAHEiwAuQ6Bknz67qZ1BG7-Pn-3HZES_4EP90iz_q9dWSCFve7PcB-6T9BCAsb0uxoCFVkQAvD_BwE&gclsrc=aw.ds">Buy it now</a></div>
+    
+         
+        </div
+
+
+<br> <br>
+
+
+
+
+
+<h1 class="headline" style="font-size: 400%; font-style: var();">MacBook<img style="background-size: 10%;" src="" alt="" id=""></h1> 
+    <h2 style="font-size: 200%;">Supercharged for pros</h2><br>
+
+
+<div><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418601_sd.jpg" width="40%" alt="" id="mac"></div>
+<div style="font-size: 300%;">Mac Book Pro</div>
+            <div style="font-size: 300%;">₹1,10,490<del style="font-size: 70%;">₹1,22,000</del>(2% off)</div>
+            <div ><a href="https://www.tatacliq.com/apple-airpods-3rd-generation/p-mp000000010970541?ef_id=CjwKCAiAgbiQBhAHEiwAuQ6Bknz67qZ1BG7-Pn-3HZES_4EP90iz_q9dWSCFve7PcB-6T9BCAsb0uxoCFVkQAvD_BwE:G:s&s_kwcid=AL!856!3!573530356551!!!g!1258010602991!%7bkeyword&&cid=ps:E_sok-TataCliq-STD-Apple-Range-Visits:Google:PLA_Electronics&gclid=CjwKCAiAgbiQBhAHEiwAuQ6Bknz67qZ1BG7-Pn-3HZES_4EP90iz_q9dWSCFve7PcB-6T9BCAsb0uxoCFVkQAvD_BwE&gclsrc=aw.ds">Buy it now</a></div>
+<br>
+
+
+<h1 class="headline" style="font-size: 400%; font-style: var();">Watch<img style="background-size: 10%;" src="" alt="" id="Watch"></h1> 
+    <h2 style="font-size: 200%;">series 7</h2><br>
+
+
+    <div class="row">
+            <div class="column">
+              <img src="https://onsitego.com/blog/wp-content/uploads/2021/09/Apple-Watch-Series-7-Green.jpg" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="https://i.ytimg.com/vi/qu5kF0BctV0/maxresdefault.jpg" style="width:100%">
+            </div>
+           
+          </div>
+
+
+
+
+   <h1 class="headline" style="font-size: 400%; font-style: var();">iPads<img style="background-size: 10%;" src="" alt=""></h1> 
+        <h2 style="font-size: 200%;">series 7</h2><br>
+      <div><img src="https://www.apple.com/newsroom/images/product/ipad/standard/apple_ipad-pro-spring21_hero_04202021_big.jpg.large.jpg" alt=""></div></center><br>
+
+
+        <!-- <section id="support">
+          <div class="section-inner">
+              <h2 style="font-size: 400%;">Contact Us</h2>
+              <p>You can find Us on:</p>
+              <ul style="list-style-type: square;">
+
+
+                  <li><a href="https://instagram.com/jagadish_1112?utm_medium=copy_link/">Instagram</a></li>
+                  <li><a href="https://twitter.com/Jagadis43584410?t=S1ZpFLrkCbJqzBrBU0QxiA&s=09">Twitter</a></li>
+                  
+              </ul>
+              <p>Or, you can send us an <a href="mailto:21eg105e18@anurag.edu.in">email</a>.</p>
+          </div>
+      </section> -->
+    </div>
+</div>
+    <footer>
+        <p>
+            Copyrights &copy; 2023. All rights reserved ||      
+            Codsoft web develpoment task 1 <br>
+         Done by Garaga Jagadish Bapanna
+          
+        </p>
+      </footer>
+      
+</body>
+</html>   
